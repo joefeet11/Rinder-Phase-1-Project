@@ -20,6 +20,50 @@
         "aboutMe": "insert data",
         "roomatePref": "insert data",
         "propertyType": "insert data"
+      },
+      {
+        "id": 1,
+        "name": "Woody",
+        "image": "",
+        "contactInfo": "insert data",
+        "likes": 8,
+        "aboutMe": "insert data",
+        "roomatePref": "insert data",
+        "propertyType": "insert data"
+
+      },
+      {
+        "id": 1,
+        "name": "Woody",
+        "image": "",
+        "contactInfo": "insert data",
+        "likes": 8,
+        "aboutMe": "insert data",
+        "roomatePref": "insert data",
+        "propertyType": "insert data"
+
+      },
+      {
+        "id": 1,
+        "name": "Woody",
+        "image": "",
+        "contactInfo": "insert data",
+        "likes": 8,
+        "aboutMe": "insert data",
+        "roomatePref": "insert data",
+        "propertyType": "insert data"
+
+      },
+      {
+        "id": 1,
+        "name": "Woody",
+        "image": "",
+        "contactInfo": "insert data",
+        "likes": 8,
+        "aboutMe": "insert data",
+        "roomatePref": "insert data",
+        "propertyType": "insert data"
+
       }
     ]
   }
