@@ -35,11 +35,12 @@ const renderProfile = profile => {
     profileContainer.appendChild(profileCard)
 
     profileLikeBtn.addEventListener('click', (e) => {
-        let likesValue = profile.likes
-        likesValue + 1 == likesValue 
-        profileLikes.textContent = `Likes: ${likesValue}`
+        profile.likes += 1
+        profileLikes.textContent = `Likes: ${profile.likes}`
         console.log(e)
-        console.log(likesValue)
+        console.log(profile.likes)
+        patchLikes(profile)
+        
     })
 
      
@@ -79,6 +80,19 @@ function postProfile(data) {
         },
         body: JSON.stringify(data)
     })
+}
+
+function patchLikes(data) {
+    fetch(`http://localhost:3000/people/${data.id}`,{
+    method: 'PATCH', 
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
 
