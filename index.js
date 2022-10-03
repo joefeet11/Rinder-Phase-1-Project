@@ -1,5 +1,7 @@
 const API = 'http://localhost:3000/people'
 console.log('hi')
+ 
+
 
 
 
@@ -16,6 +18,23 @@ const renderProfile = profile => {
     const profileImg = document.createElement('img')
     const profileLikes = document.createElement('p')
     const profileLikeBtn = document.createElement('button')
+    console.log(profile)
+    
+    
+
+    
+    document.querySelector('#dropdown').addEventListener('change', filterFunction);
+
+    function filterFunction(e) {
+        e.preventDefault();
+        filterSelection = e.target.value
+        console.log(filterSelection)
+        
+         
+    }
+    
+    
+
 
     profileCard.className = 'list-li'
     profileContactInfo.textContent = profile.contactInfo 
@@ -71,6 +90,8 @@ function createNewProfile(e) {
 
     
 }
+
+
 
 function postProfile(data) {
     return fetch('http://localhost:3000/people',{
