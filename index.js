@@ -34,17 +34,25 @@ const renderProfile = profile => {
     const profileContainer = document.querySelector('#profileList')
     profileContainer.appendChild(profileCard)
 
+    profileLikeBtn.addEventListener('click', (e) => {
+        let likesValue = profile.likes
+        likesValue + 1 == likesValue 
+        profileLikes.textContent = `Likes: ${likesValue}`
+        console.log(e)
+        console.log(likesValue)
+    })
+
      
 
 
 }
 
-const profileForm = document.querySelector('#inputForm')
+document.querySelector('#inputForm').addEventListener('submit', createNewProfile);
 
-profileForm.addEventListener('submit', e => {
+function createNewProfile(e) {
     e.preventDefault();
 
-    const newProfile = {
+    let newProfile = {
         
         name: e.target.name.value,
         image: e.target.imgUrl.value,
@@ -54,21 +62,22 @@ profileForm.addEventListener('submit', e => {
         roomatePref: e.target.roomatePref.value,
         propertyType: e.target.propType.value,
         city: e.target.city.value
-    }
+    };
+    console.log(newProfile)
     postProfile(newProfile)
-    .catch(console.log)
+    .catch(console.log('did not work'))
 
 
     
-})
+}
 
-function postProfile(profile) {
-    return fetch(API,{
+function postProfile(data) {
+    return fetch('http://localhost:3000/people',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(profile)
+        body: JSON.stringify(data)
     })
 }
 

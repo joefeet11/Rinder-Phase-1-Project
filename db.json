@@ -1,70 +1,81 @@
 {
-    "people": [
-      {
-        
-        "name": "Woody",
-        "image": "",
-        "contactInfo": "insert data",
-        "likes": 8,
-        "aboutMe": "insert data",
-        "roomatePref": "insert data",
-        "propertyType": "insert data",
-        "city": "Denver"
-
-      },
-      {
-        
-        "name": "Woody",
-        "image": "",
-        "contactInfo": "insert data",
-        "likes": 8,
-        "aboutMe": "insert data",
-        "roomatePref": "insert data",
-        "propertyType": "insert data"
-      },
-      {
-        
-        "name": "Woody",
-        "image": "",
-        "contactInfo": "insert data",
-        "likes": 8,
-        "aboutMe": "insert data",
-        "roomatePref": "insert data",
-        "propertyType": "insert data"
-
-      },
-      {
-        
-        "name": "Woody",
-        "image": "",
-        "contactInfo": "insert data",
-        "likes": 8,
-        "aboutMe": "insert data",
-        "roomatePref": "insert data",
-        "propertyType": "insert data"
-
-      },
-      {
-        
-        "name": "Woody",
-        "image": "",
-        "contactInfo": "insert data",
-        "likes": 8,
-        "aboutMe": "insert data",
-        "roomatePref": "insert data",
-        "propertyType": "insert data"
-
-      },
-      {
-        
-        "name": "Woody",
-        "image": "",
-        "contactInfo": "insert data",
-        "likes": 8,
-        "aboutMe": "insert data",
-        "roomatePref": "insert data",
-        "propertyType": "insert data"
-
-      }
-    ]
- }
+  "people": [
+    {
+      "id": 1,
+      "name": "Woody",
+      "image": "",
+      "contactInfo": "insert data",
+      "likes": 8,
+      "aboutMe": "insert data",
+      "roomatePref": "insert data",
+      "propertyType": "insert data",
+      "city": "Denver"
+    },
+    {
+      "id": 2,
+      "name": "Woody",
+      "image": "",
+      "contactInfo": "insert data",
+      "likes": 8,
+      "aboutMe": "insert data",
+      "roomatePref": "insert data",
+      "propertyType": "insert data",
+      "city": "Denver"
+    },
+    {
+      "id": 3,
+      "name": "Woody",
+      "image": "",
+      "contactInfo": "insert data",
+      "likes": 8,
+      "aboutMe": "insert data",
+      "roomatePref": "insert data",
+      "propertyType": "insert data",
+      "city": "Denver"
+    },
+    {
+      "id": 4,
+      "name": "Woody",
+      "image": "",
+      "contactInfo": "insert data",
+      "likes": 8,
+      "aboutMe": "insert data",
+      "roomatePref": "insert data",
+      "propertyType": "insert data",
+      "city": "Denver"
+    },
+    {
+      "id": 5,
+      "name": "Woody",
+      "image": "",
+      "contactInfo": "insert data",
+      "likes": 8,
+      "aboutMe": "insert data",
+      "roomatePref": "insert data",
+      "propertyType": "insert data",
+      "city": "Denver"
+    },
+    {
+      "id": 6,
+      "name": "Woody",
+      "image": "",
+      "contactInfo": "insert data",
+      "likes": 8,
+      "aboutMe": "insert data",
+      "roomatePref": "insert data",
+      "propertyType": "insert data",
+      "city": "Denver"
+    },
+    {
+      "name": "boop",
+      "image": "https://blog.hootsuite.com/wp-content/uploads/2021/07/free-stock-photos-12.jpeg",
+      "contactInfo": "asdasdf",
+      "likes": 0,
+      "aboutMe": "asdfasdf",
+      "roomatePref": "asd",
+      "propertyType": "aa",
+      "city": "Westminster",
+      "id": 7
+    }
+  ]
+}
