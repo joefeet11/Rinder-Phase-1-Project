@@ -10,6 +10,38 @@ main {
     justify-content: space-around;
 
 }
+.list ul{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* border-top: solid;
+    border-width:thin medium thick 10px; */
+}
+
+.list-li{
+    list-style: none;
+    width:200px;
+    box-shadow: 8px 10px #c9c8c8;
+    padding: 5px;
+    margin:10px;
+ 
+}
+.list-li img{
+    width:190px;
+}
+.list-li button{
+    width:190px;
+    margin: 15px 5px 15px 5px;
+    border: none;
+    background-color: #fce043;
+    color: rgb(255, 255, 255);
+    padding:3px;
+    font-size: large;
+    font-weight: bold;
+}
 #form-wrapper{
     border-top: solid;
     border-bottom: solid;
