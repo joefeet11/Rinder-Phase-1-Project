@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="stylesheet" href="style.css">
+        <script defer src="index.js"></script>
+        <title>Rinder-Tinder for Roomates</title>
+
+
+    </head>
+    <body>
+        <header id="menu">
+            <h1>Rinder-Tinder for Roomates</h1>
+        </header>
+        <select  id = "dropdown" name = "dropdown">
+            <option value = "Computer Architecture" selected>Computer Architecture</option>
+            <option value = "Java">Java</option>
+            <option value = "Discrete Mathematics">Discrete Mathematics</option>
+         </select>
+        <div class="container">
+            <form id="inputForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"required>
+
+                <label for="contactInfo">Contact Info</label>
+                <input type="text" id="contactInfo" name="contactInfo"required>
+
+                <label for="aboutMe">About Me</label>
+                <input type="text" id="aboutMe" name="aboutMe"required>
+
+                <label for="roomatePref">Roommate Preferences</label>
+                <input type="text" id="roomatePref" name="roomatePref"required>
+
+                <label for="propertyType">Property Type</label>
+                <input type="text" id="name" name="name"required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city"required>
+
+                <label for="imgurl">Add Image URL</label>
+                <input type="text" id="imgUrl" name="imgUrl"required>
+
+                <button type="submit">Enter Profile</button>
+            </form>
+            <ul id="profileList" class="cards">
+                
+            </ul>
+        </div>
+    </body>
+</html>
