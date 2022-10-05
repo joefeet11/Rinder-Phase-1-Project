@@ -1,5 +1,6 @@
 const API = 'http://localhost:3000/people'
 console.log('hi')
+ let profileArr = []
  
 
 
@@ -18,20 +19,12 @@ const renderProfile = profile => {
     const profileImg = document.createElement('img')
     const profileLikes = document.createElement('p')
     const profileLikeBtn = document.createElement('button')
-    console.log(profile)
+    
     
     
 
     
-    document.querySelector('#dropdown').addEventListener('change', filterFunction);
-
-    function filterFunction(e) {
-        e.preventDefault();
-        filterSelection = e.target.value
-        console.log(filterSelection)
-        
-         
-    }
+    
     
     
 
@@ -52,6 +45,15 @@ const renderProfile = profile => {
 
     const profileContainer = document.querySelector('#profileList')
     profileContainer.appendChild(profileCard)
+
+    profileLikeBtn.addEventListener('mouseover',(e) => {
+        e.target.style.color = "blue";
+
+        setTimeout( ()=> {
+            e.target.style.color = "";
+        },200);
+    
+    })
 
     profileLikeBtn.addEventListener('click', (e) => {
         profile.likes += 1
@@ -91,6 +93,16 @@ function createNewProfile(e) {
     
 }
 
+function dropDownFilter () {
+    const dropValue = document.querySelector('#dropdown')
+    dropValue.addEventListener('change', (e) => {
+        if(e.target.value === 'Denver') {
+            
+        }
+    })
+}
+
+
 
 
 function postProfile(data) {
@@ -117,7 +129,18 @@ function patchLikes(data) {
 }
 
 
-fetch(API)
-.then (resp => resp.json())
-.then(profile => profile.forEach(renderProfile))
+const fetchProfile = (api) => {
+    fetch(API)
+    .then (resp => resp.json())
+    .then(profile => {profile.forEach(profile => profileArr.push(profile))
+        console.log(profile)
+        console.log(profileArr)
+        profileArr.forEach(renderProfile)
+        
+    })
+    
+}
+fetchProfile(API)
+
+
 
