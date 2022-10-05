@@ -1,6 +1,6 @@
 header h1 {
     text-align: center;
-    color: rgb(208, 18, 52);
+    color: black;
     
     font-family: Verdana;
 }
@@ -10,34 +10,12 @@ main {
     justify-content: space-around;
 
 }
-.list ul{
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    /* border-top: solid;
-    border-width:thin medium thick 10px; */
-}
 
-.list-li{
-    list-style: none;
-    width:200px;
-    box-shadow: 8px 10px #c9c8c8;
-    padding: 5px;
-    margin:10px;
- 
-}
-.list-li img{
-    width:190px;
-}
 .list-li button{
     width:190px;
     margin: 15px 5px 15px 5px;
-    border: none;
-    background-color: #fce043;
-    color: rgb(255, 255, 255);
+    background-color: pink;
+    color: black);
     padding:3px;
     font-size: large;
     font-weight: bold;
@@ -73,4 +51,30 @@ form{
     width: 400px; 
     display: flex;
     flex-direction: column;
+}
+
+#profileList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+}
+
+.list-li{
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+}
+
+.list-li img{
+    object-fit:contain;
+    width: 100%;
+    height: 100%;
+}
+/*changes background color*/
+body{
+    background-color: lightblue;
+}
+
+/*changes button color*/
+button{
+    background-color: pink;
 }

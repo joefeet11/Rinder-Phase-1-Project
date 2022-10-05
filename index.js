@@ -37,7 +37,7 @@ const renderProfile = profile => {
     profilePropType.textContent = `Property Type: ${profile.propertyType}`
     profileCity.textContent = `City of Interest: ${profile.city}`
     profileImg.src = profile.image
-    profileLikes.textContent = `Likes:${profile.likes}`
+    profileLikes.textContent = `Likes: ${profile.likes}`
     profileLikeBtn.textContent = 'Like'
     
     profileCard.append(profileName, profileImg, profileCity, profilePropType, profileRoomPref, profileContactInfo, profileAboutMe, profileLikes, profileLikeBtn)
@@ -46,12 +46,12 @@ const renderProfile = profile => {
     const profileContainer = document.querySelector('#profileList')
     profileContainer.appendChild(profileCard)
 
-    profileLikeBtn.addEventListener('mouseover',(e) => {
-        e.target.style.color = "blue";
 
+    profileLikeBtn.addEventListener('mouseover',(e) => {
+        e.target.style.color = "white";
         setTimeout( ()=> {
             e.target.style.color = "";
-        },200);
+        },600);
     
     })
 
@@ -143,4 +143,21 @@ const fetchProfile = (api) => {
 fetchProfile(API)
 
 
+// will show the form when the butten is pressed and hide it again 
+const btn = document.createElement('button');
+btn.id = "formShowButton"
+btn.textContent = "Hide Form"
+const div1 = document.querySelector("div")
+div1.append(btn)
 
+btn.addEventListener('click', () => {
+  const form = document.querySelector('form');
+
+  if (form.style.display === 'none') {
+    // SHOWS the form
+    form.style.display = 'block';
+  } else {
+    // HIDES the form
+    form.style.display = 'none';
+  }
+});
