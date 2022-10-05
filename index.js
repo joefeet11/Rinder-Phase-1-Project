@@ -30,14 +30,14 @@ const renderProfile = profile => {
 
 
     profileCard.className = 'list-li'
-    profileContactInfo.textContent = profile.contactInfo 
-    profileName.textContent = profile.name
-    profileAboutMe.textContent = profile.aboutMe
-    profileRoomPref.textContent = profile.roomatePref 
-    profilePropType.textContent = profile.propertyType
-    profileCity.textContent = profile.city
+    profileContactInfo.textContent = `Contact Info: ${profile.contactInfo}` 
+    profileName.textContent = `Name: ${profile.name}`
+    profileAboutMe.textContent = `About Me: ${profile.aboutMe}`
+    profileRoomPref.textContent = `Roomate Preferences: ${profile.roomatePref}`
+    profilePropType.textContent = `Property Type: ${profile.propertyType}`
+    profileCity.textContent = `City of Interest: ${profile.city}`
     profileImg.src = profile.image
-    profileLikes.textContent = `Likes: ${profile.likes}`
+    profileLikes.textContent = `Likes:${profile.likes}`
     profileLikeBtn.textContent = 'Like'
     
     profileCard.append(profileName, profileImg, profileCity, profilePropType, profileRoomPref, profileContactInfo, profileAboutMe, profileLikes, profileLikeBtn)
