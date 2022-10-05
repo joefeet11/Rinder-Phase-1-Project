@@ -27,7 +27,7 @@
       "name": "Will",
       "image": "https://www.indiewire.com/wp-content/uploads/2022/10/GettyImages-1388090285.jpg?w=780",
       "contactInfo": "WillSmith@yahoo.com",
-      "likes": 8,
+      "likes": 9,
       "aboutMe": "Hi everyone, I am an actor and I recently won an oscar. I am super excited to continue working on my acting while also spending time with my family.",
       "roomatePref": "I prefer a clean roomate that likes watching football!",
       "propertyType": "House",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "name": "jennfier",
+      "name": "Jennifer",
       "image": "https://www.vibe.com/wp-content/uploads/2014/01/97291760.jpg",
       "contactInfo": "jennyfromtheblock@gmail.com",
       "likes": 8,
