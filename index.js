@@ -1,14 +1,23 @@
 const API = 'http://localhost:3000/people'
 console.log('hi')
- let profileArr = []
  
+ //const backBtn
+ profileArr = []
+ 
+ 
+ 
+ let profileContainer = document.querySelector('#profileList')
+function clearContainer(data){
+    profileContainer.textContent = ""
+    renderProfile(data)
 
-
+}
 
 
 
 
 const renderProfile = profile => {
+
     const profileCard = document.createElement('li')
     const profileContactInfo = document.createElement('p')
     const profileName = document.createElement('h3')
@@ -19,6 +28,8 @@ const renderProfile = profile => {
     const profileImg = document.createElement('img')
     const profileLikes = document.createElement('p')
     const profileLikeBtn = document.createElement('button')
+
+    
     
     
     
@@ -30,29 +41,30 @@ const renderProfile = profile => {
 
 
     profileCard.className = 'list-li'
-    profileContactInfo.textContent = `Contact Info: ${profile.contactInfo}` 
-    profileName.textContent = `Name: ${profile.name}`
-    profileAboutMe.textContent = `About Me: ${profile.aboutMe}`
-    profileRoomPref.textContent = `Roomate Preferences: ${profile.roomatePref}`
-    profilePropType.textContent = `Property Type: ${profile.propertyType}`
-    profileCity.textContent = `City of Interest: ${profile.city}`
+    profileContactInfo.innerHTML = `<b>Contact Info:</b> ${profile.contactInfo}` 
+    profileName.innerHTML = `${profile.name}`
+    profileAboutMe.innerHTML = `<b>About Me:</b> ${profile.aboutMe}`
+    profileRoomPref.innerHTML = `<b>Roomate Preferences:</b> ${profile.roomatePref}`
+    profilePropType.innerHTML = `<b>Property Type:</b> ${profile.propertyType}`
+    profileCity.innerHTML = `<b>City of Interest:</b> ${profile.city}`
     profileImg.src = profile.image
-    profileLikes.textContent = `Likes: ${profile.likes}`
+    profileLikes.innerHTML = `<b>Likes:</b> ${profile.likes}`
     profileLikeBtn.textContent = 'Like'
     
     profileCard.append(profileName, profileImg, profileCity, profilePropType, profileRoomPref, profileContactInfo, profileAboutMe, profileLikes, profileLikeBtn)
 
 
-    const profileContainer = document.querySelector('#profileList')
+    
+
     profileContainer.appendChild(profileCard)
 
 
-    profileLikeBtn.addEventListener('mouseover',(e) => {
-        e.target.style.color = "white";
-        setTimeout( ()=> {
-            e.target.style.color = "";
-        },600);
+    profileLikeBtn.addEventListener('mouseenter',(e) => {
+        e.target.style.backgroundColor = "white";
     
+    })
+    profileLikeBtn.addEventListener('mouseleave', (e) => {
+        e.target.style.backgroundColor = ""
     })
 
     profileLikeBtn.addEventListener('click', (e) => {
@@ -86,6 +98,7 @@ function createNewProfile(e) {
         city: e.target.city.value
     };
     console.log(newProfile)
+    renderProfile(newProfile)
     postProfile(newProfile)
     .catch(console.log('did not work'))
 
@@ -93,14 +106,7 @@ function createNewProfile(e) {
     
 }
 
-function dropDownFilter () {
-    const dropValue = document.querySelector('#dropdown')
-    dropValue.addEventListener('change', (e) => {
-        if(e.target.value === 'Denver') {
-            
-        }
-    })
-}
+
 
 
 
@@ -129,18 +135,68 @@ function patchLikes(data) {
 }
 
 
-const fetchProfile = (api) => {
-    fetch(API)
-    .then (resp => resp.json())
-    .then(profile => {profile.forEach(profile => profileArr.push(profile))
-        console.log(profile)
-        console.log(profileArr)
-        profileArr.forEach(renderProfile)
-        
-    })
+
+const nextBtn = document.querySelector('#nextBtn')
+const prevBtn = document.querySelector('#prevBtn')
+function moveThroughProfiles(array) {
+    let item = 1
+    nextBtn.addEventListener("click", goNext)
+
     
+    
+    function goNext() {
+        
+    if(item< array.length){
+        item ++
+        fetchProfile()
+
+        }
+        else{alert("No more new profiles")}
+    }
+    
+    prevBtn.addEventListener('click', goPrev)
+        function goPrev() {
+            
+            if(item>1){
+                item --
+                fetchProfile()
+            }
+
+        }
+        
+        function fetchProfile(){
+            fetch(`http://localhost:3000/people/${item}`)
+            .then(resp => resp.json())
+            .then(clearContainer)
+            
+        }
+        fetchProfile()
+        
+
 }
-fetchProfile(API)
+
+
+
+
+
+
+
+
+//function fetchProfile(){
+    //fetch(`http://localhost:3000/people/${item}`)
+    //.then(resp => resp.json())
+    //.then(renderProfile)
+    
+//}
+//fetchProfile()
+
+ function fetchFullProfile(){
+    fetch(`http://localhost:3000/people`)
+    .then(resp => resp.json())
+    .then(moveThroughProfiles)
+
+ }
+ fetchFullProfile()
 
 
 // will show the form when the butten is pressed and hide it again 
@@ -156,8 +212,10 @@ btn.addEventListener('click', () => {
   if (form.style.display === 'none') {
     // SHOWS the form
     form.style.display = 'block';
+    btn.textContent = 'Hide Form'
   } else {
     // HIDES the form
     form.style.display = 'none';
+    btn.textContent = 'Show Form'
   }
 });
