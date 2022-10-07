@@ -98,13 +98,17 @@ function createNewProfile(e) {
         city: e.target.city.value
     };
     console.log(newProfile)
-    renderProfile(newProfile)
+    
     postProfile(newProfile)
-    .catch(console.log('did not work'))
+    location.reload()
+    
+    
+    
 
 
     
 }
+
 
 
 
@@ -174,6 +178,20 @@ function moveThroughProfiles(array) {
         
 
 }
+nextBtn.addEventListener('mouseenter',(e) => {
+    e.target.style.backgroundColor = "white";
+
+})
+nextBtn.addEventListener('mouseleave', (e) => {
+    e.target.style.backgroundColor = ""
+}) 
+prevBtn.addEventListener('mouseenter',(e) => {
+    e.target.style.backgroundColor = "white";
+
+})
+prevBtn.addEventListener('mouseleave', (e) => {
+    e.target.style.backgroundColor = ""
+})
 
 
 

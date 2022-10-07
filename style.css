@@ -54,19 +54,25 @@ form{
 }
 
 #profileList{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    grid-gap: 20px;
+    
 }
 
 .list-li{
     display: grid;
-    grid-template-rows: max-content 200px 1fr;
+    grid-template-rows: max-content 400px 1fr;
     border-style: solid;
     border-width: 4px 4px 4px 4px;
     border-color: rgb(255, 255, 255);
     border-radius: 0.3rem;
     padding: 8px;
+    margin: 10px auto 10px auto;
+    width: 400px;
+    
+    flex-direction: column;
+    
+    
+
+     
 
     
 }
@@ -84,4 +90,10 @@ body{
 /*changes button color*/
 button{
     background-color: pink;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    
+    
 }

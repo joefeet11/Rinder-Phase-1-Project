@@ -7,7 +7,7 @@
       "contactInfo": "harry@gmail.com",
       "likes": 54,
       "aboutMe": "Hi everyone, my name is Harry and my pronouns are he/him. I am a musician but my hobbies include fashion and reading!",
-      "roomatePref": "I prefer a roomate that enjoys similar hobbies. I prefer my roomate to be clean and respectful",
+      "roomatePref": "I prefer a roomate that enjoys similar hobbies. I prefer my roomate to be clean and respectful.",
       "propertyType": "House",
       "city": "Denver"
     },
@@ -18,7 +18,7 @@
       "contactInfo": "contacttherock@gmail.com",
       "likes": 26,
       "aboutMe": "Hi everyone, my name is Dwayne. I am an actor but I also love music. My favorite artist is Meghan the Stalion!",
-      "roomatePref": "I prefer someone clean and I am definitely okay with pets",
+      "roomatePref": "I prefer someone clean and I am definitely okay with pets.",
       "propertyType": "A Big House",
       "city": "Honolulu"
     },
@@ -39,7 +39,7 @@
       "image": "https://people.com/thmb/gjyoWZsGDdDPtsLsoGN_MgZ_sXc=/1391x2000/filters:fill(auto,1)/Chris-Rock-d3e2fdc095ad4f488a37e3fe658b612e.jpg",
       "contactInfo": "cRock@gmail.com",
       "likes": 22,
-      "aboutMe": "Hi everyone! you can call me Chris. I am an actor, comedian, host, and a voice actor",
+      "aboutMe": "Hi everyone! you can call me Chris. I am an actor, comedian, host, and a voice actor.",
       "roomatePref": "I prefer a clean, respectful, and pays rent on time. I prefer no pets due to my pet allergies :( ",
       "propertyType": "Condo",
       "city": "Los Angeles"
@@ -77,5 +77,6 @@
       "city": "Westminster",
       "id": 7
     }
+    
   ]
 }
