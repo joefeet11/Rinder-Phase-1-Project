@@ -69,7 +69,7 @@ const renderProfile = profile => {
 
     profileLikeBtn.addEventListener('click', (e) => {
         profile.likes += 1
-        profileLikes.textContent = `Likes: ${profile.likes}`
+        profileLikes.innerHTML = `<b>Likes:</b> ${profile.likes}`
         console.log(e)
         console.log(profile.likes)
         patchLikes(profile)
@@ -80,6 +80,15 @@ const renderProfile = profile => {
 
 
 }
+const enterProfileBtn = document.querySelector('#enterProfileBtn')
+enterProfileBtn.addEventListener('mouseenter',(e) => {
+    e.target.style.backgroundColor = "white";
+
+})
+enterProfileBtn.addEventListener('mouseleave', (e) => {
+    e.target.style.backgroundColor = ""
+})
+
 
 document.querySelector('#inputForm').addEventListener('submit', createNewProfile);
 
@@ -100,7 +109,7 @@ function createNewProfile(e) {
     console.log(newProfile)
     
     postProfile(newProfile)
-    location.reload()
+    
     
     
     
@@ -219,6 +228,13 @@ prevBtn.addEventListener('mouseleave', (e) => {
 
 // will show the form when the butten is pressed and hide it again 
 const btn = document.createElement('button');
+btn.addEventListener('mouseenter',(e) => {
+    e.target.style.backgroundColor = "white";
+
+})
+btn.addEventListener('mouseleave', (e) => {
+    e.target.style.backgroundColor = ""
+})
 btn.id = "formShowButton"
 btn.textContent = "Hide Form"
 const div1 = document.querySelector("div")
@@ -234,6 +250,6 @@ btn.addEventListener('click', () => {
   } else {
     // HIDES the form
     form.style.display = 'none';
-    btn.textContent = 'Show Form'
+    btn.textContent = 'Enter Your Profile'
   }
 });

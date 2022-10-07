@@ -12,9 +12,9 @@ main {
 }
 
 .list-li button{
-    width:190px;
+    width: 100px;
     margin: 15px 5px 15px 5px;
-    background-color: pink;
+    background-color: rgb(248, 147, 164);
     color: black;
     padding:3px;
     font-size: large;
@@ -67,6 +67,8 @@ form{
     padding: 8px;
     margin: 10px auto 10px auto;
     width: 400px;
+    background-color: rgb(244, 209, 209);
+    font-size: 20px;
     
     flex-direction: column;
     
@@ -89,11 +91,49 @@ body{
 
 /*changes button color*/
 button{
-    background-color: pink;
+    background-color: rgb(248, 147, 164);
     margin: auto;
     display: flex;
-    flex-direction: column;
+    
+    
+
+
     font-size: larger;
+    border-radius: 8px;
+    
+
     
     
+    
+}
+.prevbtn{
+    background-color: rgb(248, 147, 164);
+    margin: auto;
+   
+    float: left;
+    font-size: 30px;
+    border-radius: 8px;
+}
+.nextbtn{
+    background-color: rgb(248, 147, 164);
+    margin: auto;
+    
+    float: right;
+    font-size: 30px;
+    border-radius: 8px;
+    
+    
+}
+.moveBtnDiv{
+    position: relative;
+    height: 100px;
+    
+    
+
+}
+h1{
+    background-color:  rgb(248, 147, 164);
+}
+span{
+    vertical-align: middle;
 }

@@ -7,14 +7,14 @@
 
         <link rel="stylesheet" href="style.css">
         <script defer src="index.js"></script>
-        <title>Rinder-Tinder for Roommates</title>
+        <title>Rinder-The Roomate Finder App</title>
 
 
     </head>
 
     <body>
         <header id="menu">
-            <h1>Rinder-Tinder for Roommates</h1>
+            <h1>Rinder-Roomate Finder</h1>
         </header>
         <div class="container">
             <form id="inputForm">
@@ -39,14 +39,18 @@
                 <label for="imgurl">Add Image URL</label>
                 <input type="text" id="imgUrl" name="imgUrl">
 
-                <button type="submit">Enter Profile</button>
+                <button id= 'enterProfileBtn' type="submit">Enter Profile</button>
             </form>
         
         </div>
         <div>
             <div ><ul id="profileList" ></ul></div>
-            <button id= "prevBtn" type="click">Prev</button>
-            <button id= "nextBtn" type="click">Next</button>
+            
+
+        </div>
+        <div class = 'moveBtnDiv'>
+            <button class = 'prevbtn' id= "prevBtn" type="click">Prev</button>
+            <button class = 'nextbtn'  id= "nextBtn" type="click">Next</button>
 
         </div>
     </body>

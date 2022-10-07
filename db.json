@@ -5,7 +5,7 @@
       "name": "Harry",
       "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1206186051.jpg",
       "contactInfo": "harry@gmail.com",
-      "likes": 54,
+      "likes": 57,
       "aboutMe": "Hi everyone, my name is Harry and my pronouns are he/him. I am a musician but my hobbies include fashion and reading!",
       "roomatePref": "I prefer a roomate that enjoys similar hobbies. I prefer my roomate to be clean and respectful.",
       "propertyType": "House",
@@ -77,6 +77,5 @@
       "city": "Westminster",
       "id": 7
     }
-    
   ]
 }
